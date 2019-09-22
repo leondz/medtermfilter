@@ -30,3 +30,6 @@ Bibtex:
  inproceedings={Proceedings of the Extended Semantic Web Conference EU Project Networking session (ESCW-PN)},
 }
 ```
+
+[![DOI](https://zenodo.org/badge/210150926.svg)](https://zenodo.org/badge/latestdoi/210150926)
+
