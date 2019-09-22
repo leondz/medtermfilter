@@ -7,7 +7,7 @@ Run
 
 ```  ./kcl-term-filter.py <input file> <serial>```
 
-where `input file` refers to a file formatted as Twitter JSON with one self-contained JSON record of a Tweet per line; and `serial is a unique identifier for this run of the program, used to name its output files.
+where `input file` refers to a file formatted as Twitter JSON with one self-contained JSON record of a Tweet per line; and `serial` is a unique identifier for this run of the program, used to name its output files.
 
 The code relies on Twitter's built-in language identification to strip out non-English tweets.
 
