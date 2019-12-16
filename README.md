@@ -1,13 +1,31 @@
 # medtermfilter
-Medical term filtering for twitter capture archives
+
+Medical term filtering for Twitter capture archives.
+
+This code was developed for the mental health use case of the EU [PHEME](https://www.pheme.eu/) project.
+
+It comprises three searches related to i) psychotropic medications (ii) mental health disorders and (iii) self-harm term categories. Each search functions separately and corresponds to a distinct sub-project aiming to identify groups of tweets containing the terms of interest.
+
 
 ## Use
 
-Run
+One of four programs may be run, depending on what should be extracted. All of these take the same kind of parameters: an `input file` that refers to a file formatted as Twitter [JSONL](http://jsonlines.org/) with one self-contained JSON record of a Tweet per line; and `serial` is a unique identifier for this run of the program, used to name its output files. English input is expected.
 
-```  ./kcl-term-filter.py <input file> <serial>```
+To extract tweets mentioning **medications** into one file per medication, run:
 
-where `input file` refers to a file formatted as Twitter JSON with one self-contained JSON record of a Tweet per line; and `serial` is a unique identifier for this run of the program, used to name its output files.
+```  ./medication-filter.py <input file> <serial>```
+
+To extract tweets mentioning **disorders** into one file per disorder, run:
+
+```  ./disorder-filter.py <input file> <serial>```
+
+To extract tweets mentioning **self-harm**, run:
+
+```  ./selfharm-filter.py <input file> <serial>```
+
+To extract tweets mentioning **any/all of the above**, run:
+
+```  ./all-terms-filter.py <input file> <serial>```
 
 The code relies on Twitter's built-in language identification to strip out non-English tweets.
 
